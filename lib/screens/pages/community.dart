@@ -147,7 +147,8 @@ List<Community> community = [
 ];
 
 class CommunityPage extends StatelessWidget {
-  Widget socialActions(context) => FittedBox(
+  Widget socialActions(context) =>
+      FittedBox(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -206,8 +207,14 @@ class CommunityPage extends StatelessWidget {
                 children: <Widget>[
                   ConstrainedBox(
                     constraints: BoxConstraints.expand(
-                      height: MediaQuery.of(context).size.height * 0.1,
-                      width: MediaQuery.of(context).size.width * 0.3,
+                      height: MediaQuery
+                          .of(context)
+                          .size
+                          .height * 0.1,
+                      width: MediaQuery
+                          .of(context)
+                          .size
+                          .width * 0.3,
                     ),
                     child: CachedNetworkImage(
                       imageUrl: community[i].image,
@@ -224,7 +231,10 @@ class CommunityPage extends StatelessWidget {
                         Text(
                           community[i].name,
                           overflow: TextOverflow.ellipsis,
-                          style: Theme.of(context).textTheme.headline6,
+                          style: Theme
+                              .of(context)
+                              .textTheme
+                              .headline6,
                         ),
                         socialActions(context),
                       ],

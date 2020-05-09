@@ -83,8 +83,14 @@ class AboutPage extends StatelessWidget {
                         children: <Widget>[
                           ConstrainedBox(
                             constraints: BoxConstraints.expand(
-                              height: MediaQuery.of(context).size.height * 0.1,
-                              width: MediaQuery.of(context).size.width * 0.2,
+                              height: MediaQuery
+                                  .of(context)
+                                  .size
+                                  .height * 0.1,
+                              width: MediaQuery
+                                  .of(context)
+                                  .size
+                                  .width * 0.2,
                             ),
                             child: CircleAvatar(
                               radius: 75.0,
@@ -112,12 +118,18 @@ class AboutPage extends StatelessWidget {
                                       'Innovative Ideas',
                                       overflow: TextOverflow.ellipsis,
                                       style:
-                                          Theme.of(context).textTheme.headline6,
+                                      Theme
+                                          .of(context)
+                                          .textTheme
+                                          .headline6,
                                     ),
                                     SizedBox(height: 10),
                                     AnimatedContainer(
                                       duration: Duration(seconds: 1),
-                                      width: MediaQuery.of(context).size.width *
+                                      width: MediaQuery
+                                          .of(context)
+                                          .size
+                                          .width *
                                           0.2,
                                       height: 5,
                                       color: Tools
@@ -125,13 +137,17 @@ class AboutPage extends StatelessWidget {
                                     ),
                                     SizedBox(height: 10),
                                     SizedBox(
-                                      width: MediaQuery.of(context).size.width *
+                                      width: MediaQuery
+                                          .of(context)
+                                          .size
+                                          .width *
                                           0.4,
                                       child: Text(
                                         'Creative Mentors',
                                         maxLines: 4,
                                         overflow: TextOverflow.ellipsis,
-                                        style: Theme.of(context)
+                                        style: Theme
+                                            .of(context)
                                             .textTheme
                                             .subtitle2,
                                       ),
@@ -158,8 +174,14 @@ class AboutPage extends StatelessWidget {
                         children: <Widget>[
                           ConstrainedBox(
                             constraints: BoxConstraints.expand(
-                              height: MediaQuery.of(context).size.height * 0.1,
-                              width: MediaQuery.of(context).size.width * 0.2,
+                              height: MediaQuery
+                                  .of(context)
+                                  .size
+                                  .height * 0.1,
+                              width: MediaQuery
+                                  .of(context)
+                                  .size
+                                  .width * 0.2,
                             ),
                             child: CircleAvatar(
                               radius: 75.0,
@@ -187,12 +209,18 @@ class AboutPage extends StatelessWidget {
                                       'Calculated Target',
                                       overflow: TextOverflow.ellipsis,
                                       style:
-                                          Theme.of(context).textTheme.headline6,
+                                      Theme
+                                          .of(context)
+                                          .textTheme
+                                          .headline6,
                                     ),
                                     SizedBox(height: 10),
                                     AnimatedContainer(
                                       duration: Duration(seconds: 1),
-                                      width: MediaQuery.of(context).size.width *
+                                      width: MediaQuery
+                                          .of(context)
+                                          .size
+                                          .width *
                                           0.2,
                                       height: 5,
                                       color: Tools
@@ -200,13 +228,17 @@ class AboutPage extends StatelessWidget {
                                     ),
                                     SizedBox(height: 10),
                                     SizedBox(
-                                      width: MediaQuery.of(context).size.width *
+                                      width: MediaQuery
+                                          .of(context)
+                                          .size
+                                          .width *
                                           0.4,
                                       child: Text(
                                         'Happy Learners',
                                         maxLines: 4,
                                         overflow: TextOverflow.ellipsis,
-                                        style: Theme.of(context)
+                                        style: Theme
+                                            .of(context)
                                             .textTheme
                                             .subtitle2,
                                       ),
@@ -233,8 +265,14 @@ class AboutPage extends StatelessWidget {
                         children: <Widget>[
                           ConstrainedBox(
                             constraints: BoxConstraints.expand(
-                              height: MediaQuery.of(context).size.height * 0.1,
-                              width: MediaQuery.of(context).size.width * 0.2,
+                              height: MediaQuery
+                                  .of(context)
+                                  .size
+                                  .height * 0.1,
+                              width: MediaQuery
+                                  .of(context)
+                                  .size
+                                  .width * 0.2,
                             ),
                             child: CircleAvatar(
                               radius: 75.0,
@@ -262,12 +300,18 @@ class AboutPage extends StatelessWidget {
                                       'Perfect Results',
                                       overflow: TextOverflow.ellipsis,
                                       style:
-                                          Theme.of(context).textTheme.headline6,
+                                      Theme
+                                          .of(context)
+                                          .textTheme
+                                          .headline6,
                                     ),
                                     SizedBox(height: 10),
                                     AnimatedContainer(
                                       duration: Duration(seconds: 1),
-                                      width: MediaQuery.of(context).size.width *
+                                      width: MediaQuery
+                                          .of(context)
+                                          .size
+                                          .width *
                                           0.2,
                                       height: 5,
                                       color: Tools
@@ -275,13 +319,17 @@ class AboutPage extends StatelessWidget {
                                     ),
                                     SizedBox(height: 10),
                                     SizedBox(
-                                      width: MediaQuery.of(context).size.width *
+                                      width: MediaQuery
+                                          .of(context)
+                                          .size
+                                          .width *
                                           0.4,
                                       child: Text(
                                         'Best Analytics',
                                         maxLines: 4,
                                         overflow: TextOverflow.ellipsis,
-                                        style: Theme.of(context)
+                                        style: Theme
+                                            .of(context)
                                             .textTheme
                                             .subtitle2,
                                       ),

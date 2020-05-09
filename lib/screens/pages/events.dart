@@ -89,10 +89,10 @@ List<Event> events = [
   Event(
     title: "CodeNBuild",
     desc:
-        "Code-N-Build aims to bring a widely known hackathon culture with our own added fun elements. The event spans over a duration of 30 hours brimming with coding, developing and not to miss fun activities.",
+    "Code-N-Build aims to bring a widely known hackathon culture with our own added fun elements. The event spans over a duration of 30 hours brimming with coding, developing and not to miss fun activities.",
     image: "https://miro.medium.com/max/1400/1*Nk3kkThks62avT7Cl2tc9Q.png",
     url:
-        "https://medium.com/enappd/building-a-flutter-datetime-picker-in-just-15-minutes-6a4b13d6a6d1",
+    "https://medium.com/enappd/building-a-flutter-datetime-picker-in-just-15-minutes-6a4b13d6a6d1",
     date: '17 May 2020',
     time: '06:00 PM',
     duration: '2 hours',
@@ -103,10 +103,10 @@ List<Event> events = [
   Event(
     title: "CodeNBuild",
     desc:
-        "Code-N-Build aims to bring a widely known hackathon culture with our own added fun elements. The event spans over a duration of 30 hours brimming with coding, developing and not to miss fun activities.",
+    "Code-N-Build aims to bring a widely known hackathon culture with our own added fun elements. The event spans over a duration of 30 hours brimming with coding, developing and not to miss fun activities.",
     image: "https://miro.medium.com/max/1400/1*Nk3kkThks62avT7Cl2tc9Q.png",
     url:
-        "https://medium.com/enappd/building-a-flutter-datetime-picker-in-just-15-minutes-6a4b13d6a6d1",
+    "https://medium.com/enappd/building-a-flutter-datetime-picker-in-just-15-minutes-6a4b13d6a6d1",
     date: '17 May 2020',
     time: '06:00 PM',
     duration: '2 hours',
@@ -117,10 +117,10 @@ List<Event> events = [
   Event(
     title: "CodeNBuild",
     desc:
-        "Code-N-Build aims to bring a widely known hackathon culture with our own added fun elements. The event spans over a duration of 30 hours brimming with coding, developing and not to miss fun activities.",
+    "Code-N-Build aims to bring a widely known hackathon culture with our own added fun elements. The event spans over a duration of 30 hours brimming with coding, developing and not to miss fun activities.",
     image: "https://miro.medium.com/max/1400/1*Nk3kkThks62avT7Cl2tc9Q.png",
     url:
-        "https://medium.com/enappd/building-a-flutter-datetime-picker-in-just-15-minutes-6a4b13d6a6d1",
+    "https://medium.com/enappd/building-a-flutter-datetime-picker-in-just-15-minutes-6a4b13d6a6d1",
     date: '17 May 2020',
     time: '06:00 PM',
     duration: '2 hours',
@@ -131,10 +131,10 @@ List<Event> events = [
   Event(
     title: "CodeNBuild",
     desc:
-        "Code-N-Build aims to bring a widely known hackathon culture with our own added fun elements. The event spans over a duration of 30 hours brimming with coding, developing and not to miss fun activities.",
+    "Code-N-Build aims to bring a widely known hackathon culture with our own added fun elements. The event spans over a duration of 30 hours brimming with coding, developing and not to miss fun activities.",
     image: "https://miro.medium.com/max/1400/1*Nk3kkThks62avT7Cl2tc9Q.png",
     url:
-        "https://medium.com/enappd/building-a-flutter-datetime-picker-in-just-15-minutes-6a4b13d6a6d1",
+    "https://medium.com/enappd/building-a-flutter-datetime-picker-in-just-15-minutes-6a4b13d6a6d1",
     date: '17 May 2020',
     time: '06:00 PM',
     duration: '2 hours',
@@ -145,10 +145,10 @@ List<Event> events = [
   Event(
     title: "CodeNBuild",
     desc:
-        "Code-N-Build aims to bring a widely known hackathon culture with our own added fun elements. The event spans over a duration of 30 hours brimming with coding, developing and not to miss fun activities.",
+    "Code-N-Build aims to bring a widely known hackathon culture with our own added fun elements. The event spans over a duration of 30 hours brimming with coding, developing and not to miss fun activities.",
     image: "https://miro.medium.com/max/1400/1*Nk3kkThks62avT7Cl2tc9Q.png",
     url:
-        "https://medium.com/enappd/building-a-flutter-datetime-picker-in-just-15-minutes-6a4b13d6a6d1",
+    "https://medium.com/enappd/building-a-flutter-datetime-picker-in-just-15-minutes-6a4b13d6a6d1",
     date: '17 May 2020',
     time: '06:00 PM',
     duration: '2 hours',
@@ -159,10 +159,10 @@ List<Event> events = [
   Event(
     title: "CodeNBuild",
     desc:
-        "Code-N-Build aims to bring a widely known hackathon culture with our own added fun elements. The event spans over a duration of 30 hours brimming with coding, developing and not to miss fun activities.",
+    "Code-N-Build aims to bring a widely known hackathon culture with our own added fun elements. The event spans over a duration of 30 hours brimming with coding, developing and not to miss fun activities.",
     image: "https://miro.medium.com/max/1400/1*Nk3kkThks62avT7Cl2tc9Q.png",
     url:
-        "https://medium.com/enappd/building-a-flutter-datetime-picker-in-just-15-minutes-6a4b13d6a6d1",
+    "https://medium.com/enappd/building-a-flutter-datetime-picker-in-just-15-minutes-6a4b13d6a6d1",
     date: '17 May 2020',
     time: '06:00 PM',
     duration: '2 hours',
@@ -217,8 +217,14 @@ class EventPage extends StatelessWidget {
                     children: <Widget>[
                       ConstrainedBox(
                         constraints: BoxConstraints.expand(
-                          height: MediaQuery.of(context).size.height * 0.15,
-                          width: MediaQuery.of(context).size.width * 0.3,
+                          height: MediaQuery
+                              .of(context)
+                              .size
+                              .height * 0.15,
+                          width: MediaQuery
+                              .of(context)
+                              .size
+                              .width * 0.3,
                         ),
                         child: CachedNetworkImage(
                           imageUrl: events[i].image,
@@ -240,26 +246,38 @@ class EventPage extends StatelessWidget {
                                 Text(
                                   events[i].title,
                                   overflow: TextOverflow.ellipsis,
-                                  style: Theme.of(context).textTheme.headline6,
+                                  style: Theme
+                                      .of(context)
+                                      .textTheme
+                                      .headline6,
                                 ),
                                 SizedBox(height: 10),
                                 AnimatedContainer(
                                   duration: Duration(seconds: 1),
                                   width:
-                                      MediaQuery.of(context).size.width * 0.2,
+                                  MediaQuery
+                                      .of(context)
+                                      .size
+                                      .width * 0.2,
                                   height: 5,
                                   color: Tools.multiColors[Random().nextInt(4)],
                                 ),
                                 SizedBox(height: 10),
                                 SizedBox(
                                   width:
-                                      MediaQuery.of(context).size.width * 0.4,
+                                  MediaQuery
+                                      .of(context)
+                                      .size
+                                      .width * 0.4,
                                   child: Text(
                                     events[i].desc,
                                     maxLines: 4,
                                     overflow: TextOverflow.ellipsis,
                                     style:
-                                        Theme.of(context).textTheme.subtitle2,
+                                    Theme
+                                        .of(context)
+                                        .textTheme
+                                        .subtitle2,
                                   ),
                                 ),
                               ],
@@ -285,7 +303,10 @@ class EventPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Container(
-                        width: MediaQuery.of(context).size.width * 0.3,
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width * 0.3,
                         child: Row(
                           children: <Widget>[
                             Icon(
@@ -300,7 +321,10 @@ class EventPage extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: MediaQuery.of(context).size.width * 0.3,
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width * 0.3,
                         child: Row(
                           children: <Widget>[
                             Icon(
@@ -315,7 +339,10 @@ class EventPage extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: MediaQuery.of(context).size.width * 0.3,
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width * 0.3,
                         child: Row(
                           children: <Widget>[
                             Icon(
@@ -337,7 +364,10 @@ class EventPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Container(
-                        width: MediaQuery.of(context).size.width * 0.3,
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width * 0.3,
                         child: Row(
                           children: <Widget>[
                             Icon(
@@ -352,7 +382,10 @@ class EventPage extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: MediaQuery.of(context).size.width * 0.3,
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width * 0.3,
                         child: Row(
                           children: <Widget>[
                             Icon(
@@ -367,7 +400,10 @@ class EventPage extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: MediaQuery.of(context).size.width * 0.3,
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width * 0.3,
                         child: Row(
                           children: <Widget>[
                             Icon(

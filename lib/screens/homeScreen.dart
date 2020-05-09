@@ -43,7 +43,8 @@ class _HomeScreenState extends State<HomeScreen> {
             IconButton(
               icon: Icon(FontAwesomeIcons.facebookF),
               onPressed: () async {
-                await _launchURL("https://www.facebook.com/scriptfoundationindia/");
+                await _launchURL(
+                    "https://www.facebook.com/scriptfoundationindia/");
               },
             ),
             IconButton(
@@ -55,19 +56,22 @@ class _HomeScreenState extends State<HomeScreen> {
             IconButton(
               icon: Icon(FontAwesomeIcons.linkedinIn),
               onPressed: () async {
-                _launchURL("https://www.linkedin.com/company/script-foundation-india/");
+                _launchURL(
+                    "https://www.linkedin.com/company/script-foundation-india/");
               },
             ),
             IconButton(
               icon: Icon(FontAwesomeIcons.youtube),
               onPressed: () async {
-                await _launchURL("https://www.youtube.com/channel/UC4OVJeHogUQDHws7AKG7dMA");
+                await _launchURL(
+                    "https://www.youtube.com/channel/UC4OVJeHogUQDHws7AKG7dMA");
               },
             ),
             IconButton(
               icon: Icon(FontAwesomeIcons.meetup),
               onPressed: () async {
-                await _launchURL("https://commudle.com/script-foundation-india");
+                await _launchURL(
+                    "https://commudle.com/script-foundation-india");
               },
             ),
             IconButton(
@@ -92,8 +96,10 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icons.event_seat,
             color: Colors.green,
             title: 'Events',
-            onPressed: () => Navigator.push(context,
-                CupertinoPageRoute(builder: (context) => EventPage())),
+            onPressed: () =>
+                Navigator.push(
+                    context,
+                    CupertinoPageRoute(builder: (context) => EventPage())),
           ),
           ActionCard(
             icon: Icons.location_on,
@@ -255,7 +261,11 @@ class ActionCard extends StatelessWidget {
             ),
             Text(
               title,
-              style: Theme.of(context).textTheme.title.copyWith(
+              style: Theme
+                  .of(context)
+                  .textTheme
+                  .headline6
+                  .copyWith(
                     fontSize: 12,
                   ),
             ),

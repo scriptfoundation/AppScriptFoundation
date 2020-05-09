@@ -52,7 +52,7 @@ List<Partner> partners = [
     name: "GeeksforGeeks",
     desc: "Community Partner",
     image:
-        "https://script.itsshivam.com/assets/images/partners/geeksforgeeks.png",
+    "https://script.itsshivam.com/assets/images/partners/geeksforgeeks.png",
     url: "https://www.geeksforgeeks.org/",
   ),
   Partner(
@@ -77,7 +77,7 @@ List<Partner> partners = [
     name: "Coding Blocks",
     desc: "Community Partner",
     image:
-        "https://script.itsshivam.com/assets/images/partners/codingblocks.png",
+    "https://script.itsshivam.com/assets/images/partners/codingblocks.png",
     url: "https://codingblocks.com/",
   ),
   Partner(
@@ -96,7 +96,7 @@ List<Partner> partners = [
     name: "Stickermule",
     desc: "Community Partner",
     image:
-        "https://script.itsshivam.com/assets/images/partners/stickermule.png",
+    "https://script.itsshivam.com/assets/images/partners/stickermule.png",
     url: "https://stickermule.com/",
   ),
   Partner(
@@ -159,8 +159,14 @@ class PartnerPage extends StatelessWidget {
                   children: <Widget>[
                     ConstrainedBox(
                       constraints: BoxConstraints.expand(
-                        height: MediaQuery.of(context).size.height * 0.1,
-                        width: MediaQuery.of(context).size.width * 0.2,
+                        height: MediaQuery
+                            .of(context)
+                            .size
+                            .height * 0.1,
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width * 0.2,
                       ),
                       child: CachedNetworkImage(
                         imageUrl: partners[i].image,
@@ -181,7 +187,10 @@ class PartnerPage extends StatelessWidget {
                               Text(
                                 partners[i].name,
                                 overflow: TextOverflow.ellipsis,
-                                style: Theme.of(context).textTheme.headline6,
+                                style: Theme
+                                    .of(context)
+                                    .textTheme
+                                    .headline6,
                               ),
                             ],
                           ),
@@ -189,7 +198,10 @@ class PartnerPage extends StatelessWidget {
                           Text(
                             partners[i].desc,
                             overflow: TextOverflow.ellipsis,
-                            style: Theme.of(context).textTheme.subtitle2,
+                            style: Theme
+                                .of(context)
+                                .textTheme
+                                .subtitle2,
                           ),
                         ],
                       ),
