@@ -1,5 +1,7 @@
+import 'package:ScriptFoundation/screens/pages/about.dart';
 import 'package:ScriptFoundation/screens/pages/blog.dart';
 import 'package:ScriptFoundation/screens/pages/community.dart';
+import 'package:ScriptFoundation/screens/pages/events.dart';
 import 'package:ScriptFoundation/screens/pages/partners.dart';
 import 'package:ScriptFoundation/screens/pages/team.dart';
 import 'package:flutter/cupertino.dart';
@@ -41,35 +43,35 @@ class _HomeScreenState extends State<HomeScreen> {
             IconButton(
               icon: Icon(FontAwesomeIcons.facebookF),
               onPressed: () async {
-                await _launchURL("https://facebook.com/");
+                await _launchURL("https://www.facebook.com/scriptfoundationindia/");
               },
             ),
             IconButton(
               icon: Icon(FontAwesomeIcons.twitter),
               onPressed: () async {
-                await _launchURL("https://twitter.com/");
+                await _launchURL("https://twitter.com/ScriptFoundati1");
               },
             ),
             IconButton(
               icon: Icon(FontAwesomeIcons.linkedinIn),
               onPressed: () async {
-                _launchURL("https://linkedin.com/in/");
+                _launchURL("https://www.linkedin.com/company/script-foundation-india/");
               },
             ),
             IconButton(
               icon: Icon(FontAwesomeIcons.youtube),
               onPressed: () async {
-                await _launchURL("https://youtube.com/");
+                await _launchURL("https://www.youtube.com/channel/UC4OVJeHogUQDHws7AKG7dMA");
               },
             ),
             IconButton(
               icon: Icon(FontAwesomeIcons.meetup),
               onPressed: () async {
-                await _launchURL("https://meetup.com/");
+                await _launchURL("https://commudle.com/script-foundation-india");
               },
             ),
             IconButton(
-              icon: Icon(FontAwesomeIcons.envelope),
+              icon: Icon(FontAwesomeIcons.solidEnvelope),
               onPressed: () async {
                 var emailUrl =
                     '''mailto:support@scriptindia.org?subject=Support Request''';
@@ -90,7 +92,8 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icons.event_seat,
             color: Colors.green,
             title: 'Events',
-            onPressed: () => {},
+            onPressed: () => Navigator.push(context,
+                CupertinoPageRoute(builder: (context) => EventPage())),
           ),
           ActionCard(
             icon: Icons.location_on,
@@ -110,7 +113,8 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icons.info,
             color: Colors.brown,
             title: 'About Us',
-            onPressed: () => {},
+            onPressed: () => Navigator.push(
+                context, CupertinoPageRoute(builder: (context) => AboutPage())),
           ),
           ActionCard(
             icon: Icons.people,
