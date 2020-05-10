@@ -37,10 +37,6 @@ dependencies:
   # Either use GET or POST as per requirement.
   http: ^0.12.0+4
 
-  # The following provides easy access to the platform specific location services.
-  # Use to get current location of the user
-  geolocator: ^5.3.1
-
   # The following enables launching a URL in the mobile platform.
   # Use to open any url in default browser.
   url_launcher: ^5.4.5
@@ -57,9 +53,17 @@ dependencies:
   # Use to change font.
   google_fonts: ^1.0.0
 
+  # The following adds FontAwesome Icons to the app.
+  # Use same as Icon simply.
   font_awesome_flutter: ^8.5.0
 
+  # The following keeps the images cached once loaded.
+  # Use same as NetworkImage simply.
   cached_network_image: ^2.2.0+1
+
+  # The following allows the app to connect to Cloud Firestore.
+  # Use to read & write data from Firebase.
+  cloud_firestore: ^0.13.5
 
 dev_dependencies:
   flutter_test:
