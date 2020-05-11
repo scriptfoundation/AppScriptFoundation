@@ -25,7 +25,7 @@ class AboutPage extends StatelessWidget {
             ),
             onPressed: () {
               Share.share(
-                  'Download Script Foundation App Now. https://github.com/ShivamGoyal1899/AppScriptFoundation',
+                  'Download the new Script Foundation App Now.\nhttps://play.google.com/store/apps/details?id=org.scriptindia.mobile',
                   subject: 'Script Foundation App');
             },
           ),
