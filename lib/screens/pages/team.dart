@@ -10,53 +10,6 @@ import 'package:share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class TeamPage extends StatelessWidget {
-  Widget socialActions(context, document) =>
-      FittedBox(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            IconButton(
-              icon: Icon(
-                FontAwesomeIcons.linkedinIn,
-                size: 15,
-              ),
-              onPressed: () {
-                launch(document['linkedinUrl']);
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                FontAwesomeIcons.facebookF,
-                size: 15,
-              ),
-              onPressed: () {
-                launch(document['fbUrl']);
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                FontAwesomeIcons.twitter,
-                size: 15,
-              ),
-              onPressed: () {
-                launch(document['twitterUrl']);
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                FontAwesomeIcons.solidEnvelope,
-                size: 15,
-              ),
-              onPressed: () async {
-                var emailUrl = 'mailto: ${document['email']}';
-                var out = Uri.encodeFull(emailUrl);
-                await launch(out);
-              },
-            ),
-          ],
-        ),
-      );
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -127,23 +80,30 @@ class TeamPage extends StatelessWidget {
                           ),
                           SizedBox(width: 20),
                           Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisSize: MainAxisSize.min,
                                   children: <Widget>[
-                                    Text(
-                                      document['name'],
-                                      overflow: TextOverflow.ellipsis,
-                                      style:
-                                      Theme
+                                    SizedBox(
+                                      width: MediaQuery
                                           .of(context)
-                                          .textTheme
-                                          .headline6,
+                                          .size
+                                          .width *
+                                          0.4,
+                                      child: Text(
+                                        document['name'],
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: Theme
+                                            .of(context)
+                                            .textTheme
+                                            .headline6,
+                                      ),
                                     ),
                                     SizedBox(height: 10),
                                     AnimatedContainer(
@@ -157,19 +117,35 @@ class TeamPage extends StatelessWidget {
                                       color: Tools
                                           .multiColors[Random().nextInt(4)],
                                     ),
+                                    SizedBox(height: 10),
+                                    SizedBox(
+                                      width: MediaQuery
+                                          .of(context)
+                                          .size
+                                          .width *
+                                          0.4,
+                                      child: Text(
+                                        document['desc'],
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: Theme
+                                            .of(context)
+                                            .textTheme
+                                            .subtitle2,
+                                      ),
+                                    ),
                                   ],
                                 ),
                                 SizedBox(height: 10),
-                                Text(
-                                  document['desc'],
-                                  overflow: TextOverflow.ellipsis,
-                                  style: Theme
-                                      .of(context)
-                                      .textTheme
-                                      .subtitle2,
+                                IconButton(
+                                  icon: Icon(
+                                    FontAwesomeIcons.linkedinIn,
+                                    size: 25,
+                                  ),
+                                  onPressed: () {
+                                    launch(document['linkedinUrl']);
+                                  },
                                 ),
-                                SizedBox(height: 10),
-                                socialActions(context, document),
                               ],
                             ),
                           ),

@@ -62,7 +62,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 Text(
                   'Script',
                   style: GoogleFonts.raleway(
-                    fontSize: 50.0,
+                    fontSize: 40.0,
                     fontWeight: FontWeight.w700,
                     color: Colors.white,
                   ),
@@ -71,7 +71,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 Text(
                   'Foundation',
                   style: GoogleFonts.raleway(
-                    fontSize: 50.0,
+                    fontSize: 40.0,
                     fontWeight: FontWeight.w700,
                     color: Colors.white,
                   ),

@@ -97,13 +97,21 @@ class EventPage extends StatelessWidget {
                                       MainAxisAlignment.start,
                                       mainAxisSize: MainAxisSize.min,
                                       children: <Widget>[
-                                        Text(
-                                          document['title'],
-                                          overflow: TextOverflow.ellipsis,
-                                          style: Theme
+                                        SizedBox(
+                                          width: MediaQuery
                                               .of(context)
-                                              .textTheme
-                                              .headline6,
+                                              .size
+                                              .width *
+                                              0.4,
+                                          child: Text(
+                                            document['title'],
+                                            maxLines: 2,
+                                            overflow: TextOverflow.ellipsis,
+                                            style: Theme
+                                                .of(context)
+                                                .textTheme
+                                                .headline6,
+                                          ),
                                         ),
                                         SizedBox(height: 10),
                                         AnimatedContainer(
@@ -156,11 +164,11 @@ class EventPage extends StatelessWidget {
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-                              Container(
+                              SizedBox(
                                 width: MediaQuery
                                     .of(context)
                                     .size
-                                    .width * 0.3,
+                                    .width * 0.45,
                                 child: Row(
                                   children: <Widget>[
                                     Icon(
@@ -170,16 +178,27 @@ class EventPage extends StatelessWidget {
                                     SizedBox(
                                       width: 5.0,
                                     ),
-                                    Text(document['date']),
+                                    SizedBox(
+                                      width: MediaQuery
+                                          .of(context)
+                                          .size
+                                          .width *
+                                          0.4,
+                                      child: Text(
+                                        document['date'],
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
-                              Container(
+                              SizedBox(
                                 width: MediaQuery
                                     .of(context)
                                     .size
-                                    .width * 0.3,
+                                    .width * 0.45,
                                 child: Row(
+                                  mainAxisSize: MainAxisSize.min,
                                   children: <Widget>[
                                     Icon(
                                       Icons.access_time,
@@ -188,25 +207,17 @@ class EventPage extends StatelessWidget {
                                     SizedBox(
                                       width: 5.0,
                                     ),
-                                    Text(document['time']),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: MediaQuery
-                                    .of(context)
-                                    .size
-                                    .width * 0.3,
-                                child: Row(
-                                  children: <Widget>[
-                                    Icon(
-                                      Icons.timelapse,
-                                      size: 15.0,
-                                    ),
                                     SizedBox(
-                                      width: 5.0,
+                                      width: MediaQuery
+                                          .of(context)
+                                          .size
+                                          .width *
+                                          0.4,
+                                      child: Text(
+                                        document['time'],
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
                                     ),
-                                    Text(document['duration']),
                                   ],
                                 ),
                               ),
@@ -217,11 +228,11 @@ class EventPage extends StatelessWidget {
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-                              Container(
+                              SizedBox(
                                 width: MediaQuery
                                     .of(context)
                                     .size
-                                    .width * 0.3,
+                                    .width * 0.45,
                                 child: Row(
                                   children: <Widget>[
                                     Icon(
@@ -231,15 +242,25 @@ class EventPage extends StatelessWidget {
                                     SizedBox(
                                       width: 5.0,
                                     ),
-                                    Text(document['speaker']),
+                                    SizedBox(
+                                      width: MediaQuery
+                                          .of(context)
+                                          .size
+                                          .width *
+                                          0.4,
+                                      child: Text(
+                                        document['speaker'],
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
-                              Container(
+                              SizedBox(
                                 width: MediaQuery
                                     .of(context)
                                     .size
-                                    .width * 0.3,
+                                    .width * 0.45,
                                 child: Row(
                                   children: <Widget>[
                                     Icon(
@@ -249,15 +270,60 @@ class EventPage extends StatelessWidget {
                                     SizedBox(
                                       width: 5.0,
                                     ),
-                                    Text(document['organizer']),
+                                    SizedBox(
+                                      width: MediaQuery
+                                          .of(context)
+                                          .size
+                                          .width *
+                                          0.4,
+                                      child: Text(
+                                        document['organizer'],
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
-                              Container(
+                            ],
+                          ),
+                          SizedBox(height: 10.0),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              SizedBox(
                                 width: MediaQuery
                                     .of(context)
                                     .size
-                                    .width * 0.3,
+                                    .width * 0.45,
+                                child: Row(
+                                  children: <Widget>[
+                                    Icon(
+                                      Icons.timelapse,
+                                      size: 15.0,
+                                    ),
+                                    SizedBox(
+                                      width: 5.0,
+                                    ),
+                                    SizedBox(
+                                      width: MediaQuery
+                                          .of(context)
+                                          .size
+                                          .width *
+                                          0.4,
+                                      child: Text(
+                                        document['duration'],
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                width: MediaQuery
+                                    .of(context)
+                                    .size
+                                    .width * 0.45,
                                 child: Row(
                                   children: <Widget>[
                                     Icon(
@@ -267,7 +333,17 @@ class EventPage extends StatelessWidget {
                                     SizedBox(
                                       width: 5.0,
                                     ),
-                                    Text(document['location']),
+                                    SizedBox(
+                                      width: MediaQuery
+                                          .of(context)
+                                          .size
+                                          .width *
+                                          0.4,
+                                      child: Text(
+                                        document['location'],
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),

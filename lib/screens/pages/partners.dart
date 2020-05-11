@@ -100,16 +100,6 @@ class PartnerPage extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  SizedBox(height: 5),
-                                  Text(
-                                    document['desc'],
-                                    overflow: TextOverflow.ellipsis,
-                                    style:
-                                    Theme
-                                        .of(context)
-                                        .textTheme
-                                        .subtitle2,
-                                  ),
                                 ],
                               ),
                             ),

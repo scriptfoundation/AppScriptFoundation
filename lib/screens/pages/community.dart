@@ -101,13 +101,22 @@ class CommunityPage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
-                                Text(
-                                  document['name'],
-                                  overflow: TextOverflow.ellipsis,
-                                  style: Theme
+                                SizedBox(
+                                  width:
+                                  MediaQuery
                                       .of(context)
-                                      .textTheme
-                                      .headline6,
+                                      .size
+                                      .width * 0.4,
+                                  child: Text(
+                                    document['name'],
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 2,
+                                    style:
+                                    Theme
+                                        .of(context)
+                                        .textTheme
+                                        .headline6,
+                                  ),
                                 ),
                                 socialActions(context, document),
                               ],

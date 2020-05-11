@@ -68,13 +68,6 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
             IconButton(
-              icon: Icon(FontAwesomeIcons.meetup),
-              onPressed: () async {
-                await _launchURL(
-                    "https://commudle.com/script-foundation-india");
-              },
-            ),
-            IconButton(
               icon: Icon(FontAwesomeIcons.solidEnvelope),
               onPressed: () async {
                 var emailUrl =
@@ -209,7 +202,7 @@ class _HomeScreenState extends State<HomeScreen> {
               socialActions(context),
               SizedBox(height: 20),
               Text(
-                'Version 2.0.0',
+                'Version 2.1.0',
                 style:
                     Theme.of(context).textTheme.caption.copyWith(fontSize: 10),
               )
@@ -237,7 +230,10 @@ class ActionCard extends StatelessWidget {
       onTap: onPressed,
       child: Ink(
         height: MediaQuery.of(context).size.height * 0.1,
-        width: MediaQuery.of(context).size.width * 0.2,
+        width: MediaQuery
+            .of(context)
+            .size
+            .width * 0.21,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(8),
@@ -268,6 +264,7 @@ class ActionCard extends StatelessWidget {
                   .copyWith(
                     fontSize: 12,
                   ),
+              textAlign: TextAlign.center,
             ),
           ],
         ),

@@ -1,6 +1,3 @@
-import 'dart:math';
-
-import 'package:ScriptFoundation/universal/tools.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -109,50 +106,13 @@ class AboutPage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: <Widget>[
-                                    Text(
-                                      'Innovative Ideas',
-                                      overflow: TextOverflow.ellipsis,
-                                      style:
-                                      Theme
-                                          .of(context)
-                                          .textTheme
-                                          .headline6,
-                                    ),
-                                    SizedBox(height: 10),
-                                    AnimatedContainer(
-                                      duration: Duration(seconds: 1),
-                                      width: MediaQuery
-                                          .of(context)
-                                          .size
-                                          .width *
-                                          0.2,
-                                      height: 5,
-                                      color: Tools
-                                          .multiColors[Random().nextInt(4)],
-                                    ),
-                                    SizedBox(height: 10),
-                                    SizedBox(
-                                      width: MediaQuery
-                                          .of(context)
-                                          .size
-                                          .width *
-                                          0.4,
-                                      child: Text(
-                                        'Creative Mentors',
-                                        maxLines: 4,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: Theme
-                                            .of(context)
-                                            .textTheme
-                                            .subtitle2,
-                                      ),
-                                    ),
-                                  ],
+                                Text(
+                                  'Quality',
+                                  overflow: TextOverflow.ellipsis,
+                                  style: Theme
+                                      .of(context)
+                                      .textTheme
+                                      .headline6,
                                 ),
                               ],
                             ),
@@ -186,8 +146,8 @@ class AboutPage extends StatelessWidget {
                             child: CircleAvatar(
                               radius: 75.0,
                               child: Icon(
-                                FontAwesomeIcons.bullseye,
-                                size: 50.0,
+                                FontAwesomeIcons.bookReader,
+                                size: 40.0,
                                 color: Colors.white,
                               ),
                               backgroundColor: Colors.blue[700],
@@ -200,50 +160,13 @@ class AboutPage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: <Widget>[
-                                    Text(
-                                      'Calculated Target',
-                                      overflow: TextOverflow.ellipsis,
-                                      style:
-                                      Theme
-                                          .of(context)
-                                          .textTheme
-                                          .headline6,
-                                    ),
-                                    SizedBox(height: 10),
-                                    AnimatedContainer(
-                                      duration: Duration(seconds: 1),
-                                      width: MediaQuery
-                                          .of(context)
-                                          .size
-                                          .width *
-                                          0.2,
-                                      height: 5,
-                                      color: Tools
-                                          .multiColors[Random().nextInt(4)],
-                                    ),
-                                    SizedBox(height: 10),
-                                    SizedBox(
-                                      width: MediaQuery
-                                          .of(context)
-                                          .size
-                                          .width *
-                                          0.4,
-                                      child: Text(
-                                        'Happy Learners',
-                                        maxLines: 4,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: Theme
-                                            .of(context)
-                                            .textTheme
-                                            .subtitle2,
-                                      ),
-                                    ),
-                                  ],
+                                Text(
+                                  'Content',
+                                  overflow: TextOverflow.ellipsis,
+                                  style: Theme
+                                      .of(context)
+                                      .textTheme
+                                      .headline6,
                                 ),
                               ],
                             ),
@@ -291,50 +214,13 @@ class AboutPage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: <Widget>[
-                                    Text(
-                                      'Perfect Results',
-                                      overflow: TextOverflow.ellipsis,
-                                      style:
-                                      Theme
-                                          .of(context)
-                                          .textTheme
-                                          .headline6,
-                                    ),
-                                    SizedBox(height: 10),
-                                    AnimatedContainer(
-                                      duration: Duration(seconds: 1),
-                                      width: MediaQuery
-                                          .of(context)
-                                          .size
-                                          .width *
-                                          0.2,
-                                      height: 5,
-                                      color: Tools
-                                          .multiColors[Random().nextInt(4)],
-                                    ),
-                                    SizedBox(height: 10),
-                                    SizedBox(
-                                      width: MediaQuery
-                                          .of(context)
-                                          .size
-                                          .width *
-                                          0.4,
-                                      child: Text(
-                                        'Best Analytics',
-                                        maxLines: 4,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: Theme
-                                            .of(context)
-                                            .textTheme
-                                            .subtitle2,
-                                      ),
-                                    ),
-                                  ],
+                                Text(
+                                  'Support',
+                                  overflow: TextOverflow.ellipsis,
+                                  style: Theme
+                                      .of(context)
+                                      .textTheme
+                                      .headline6,
                                 ),
                               ],
                             ),

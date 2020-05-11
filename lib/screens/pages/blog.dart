@@ -90,14 +90,21 @@ class BlogPage extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   mainAxisSize: MainAxisSize.min,
                                   children: <Widget>[
-                                    Text(
-                                      document['title'],
-                                      overflow: TextOverflow.ellipsis,
-                                      style:
-                                      Theme
+                                    SizedBox(
+                                      width: MediaQuery
                                           .of(context)
-                                          .textTheme
-                                          .headline6,
+                                          .size
+                                          .width *
+                                          0.4,
+                                      child: Text(
+                                        document['title'],
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: Theme
+                                            .of(context)
+                                            .textTheme
+                                            .headline6,
+                                      ),
                                     ),
                                     SizedBox(height: 10),
                                     AnimatedContainer(
