@@ -202,7 +202,7 @@ class _HomeScreenState extends State<HomeScreen> {
               socialActions(context),
               SizedBox(height: 20),
               Text(
-                'Version 2.1.1',
+                'Version 1.0.1',
                 style:
                     Theme.of(context).textTheme.caption.copyWith(fontSize: 10),
               )

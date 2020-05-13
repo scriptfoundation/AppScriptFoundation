@@ -46,3 +46,4 @@ app.*.map.json
 google-services.json
 
 
+android/key.properties
