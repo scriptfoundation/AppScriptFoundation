@@ -79,17 +79,3 @@ Licensed under the [BSD 3-Clause](./LICENSE).
 
 ## :purple_heart: Thanks
 Thanks to all contributors and to sponsors for supporting the project.
-<p>
-  <a href="https://www.buymeacoffee.com/ShivamGoyal" target="_blank">
-    <img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="30">
-  </a>
-  <a href="https://www.patreon.com/bePatron?u=31786845" target="_blank">
-    <img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" alt="Become a Patron!" height="30">
-  </a>
-  <a href="https://www.paypal.me/shivamgoyal1899" target="_blank">
-    <img src="https://www.paypalobjects.com/webstatic/en_AU/i/buttons/btn_paywith_primary_l.png" alt="Pay with PayPal!" height="30">
-  </a>
-  <a href="https://opencollective.com/shivamgoyal" target="_blank">
-    <img src="https://opencollective.com/webpack/donate/button@2x.png?color=blue" height="30">
-  </a>
-</p>
