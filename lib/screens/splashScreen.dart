@@ -3,24 +3,20 @@ import 'dart:async';
 import 'package:ScriptFoundation/screens/homeScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-class SplashScreen extends StatefulWidget {
+
+class Splashscreen extends StatefulWidget {
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  _SplashscreenState createState() => _SplashscreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashscreenState extends State<Splashscreen> {
   var _alignment = Alignment.bottomCenter;
 
   @override
   initState() {
     super.initState();
     Timer(Duration(milliseconds: 10), animate);
-  }
-
-  Future<Timer> loadTimer() async {
-    return Timer(Duration(milliseconds: 500), navigate);
   }
 
   navigate() {
@@ -36,49 +32,27 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      body: Stack(
+    return Container(
+      decoration: BoxDecoration(
+        image:DecorationImage (image: AssetImage('assets/images/bg.jpg'),)
+      ),
+      child: Stack(
         children: <Widget>[
           Center(
             child: FadeInImage(
-              placeholder: AssetImage('assets/images/fade.jpg'),
-              image: AssetImage('assets/images/splash_bg.png'),
+              placeholder: AssetImage('assets/images/bg.jpg'),
+              image: AssetImage('assets/images/logo-script.png',),
+              height: double.infinity,
+              width: double.infinity,
               fadeInDuration: Duration(milliseconds: 300),
-              fit: BoxFit.fitHeight,
+              fit: BoxFit.cover,
             ),
           ),
           AnimatedContainer(
             duration: Duration(milliseconds: 1000),
             alignment: _alignment,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 120),
-                  child: Image.asset('assets/images/logo.png'),
-                ),
-                SizedBox(height: 20.0),
-                Text(
-                  'Script',
-                  style: GoogleFonts.raleway(
-                    fontSize: 40.0,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.white,
-                  ),
-                ),
-                SizedBox(height: 5.0),
-                Text(
-                  'Foundation',
-                  style: GoogleFonts.raleway(
-                    fontSize: 40.0,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.white,
-                  ),
-                ),
-              ],
-            ),
-            onEnd: loadTimer,
+           
+            
           ),
         ],
       ),
