@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.ralewayTextTheme(),
         primaryIconTheme: IconThemeData(color: Colors.black),
       ),
-      home: SplashScreen(),
+      home: Splashscreen(),
     );
   }
 }
