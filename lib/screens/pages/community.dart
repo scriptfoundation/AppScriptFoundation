@@ -56,7 +56,7 @@ class CommunityPage extends StatelessWidget {
         elevation: 0.0,
       ),
       body: StreamBuilder<QuerySnapshot>(
-        stream: Firestore.instance
+        stream: FirebaseFirestore.instance
             .collection('community')
             .orderBy("id", descending: false)
             .snapshots(),
@@ -70,7 +70,7 @@ class CommunityPage extends StatelessWidget {
             default:
               return ListView(
                 children:
-                snapshot.data.documents.map((DocumentSnapshot document) {
+                snapshot.data.docs.map((DocumentSnapshot document) {
                   return Card(
                     elevation: 0.0,
                     child: Padding(

@@ -40,7 +40,7 @@ class EventPage extends StatelessWidget {
         elevation: 0.0,
       ),
       body: StreamBuilder<QuerySnapshot>(
-        stream: Firestore.instance
+        stream: FirebaseFirestore.instance
             .collection('events')
             .orderBy("id", descending: true)
             .snapshots(),
@@ -54,7 +54,7 @@ class EventPage extends StatelessWidget {
             default:
               return ListView(
                 children:
-                snapshot.data.documents.map((DocumentSnapshot document) {
+                snapshot.data.docs.map((DocumentSnapshot document) {
                   return Card(
                     elevation: 0.0,
                     child: Padding(

@@ -37,7 +37,7 @@ class PartnerPage extends StatelessWidget {
       ),
       backgroundColor: Colors.grey[100],
       body: StreamBuilder<QuerySnapshot>(
-        stream: Firestore.instance
+        stream: FirebaseFirestore.instance
             .collection('partners')
             .orderBy("id", descending: false)
             .snapshots(),
@@ -51,7 +51,7 @@ class PartnerPage extends StatelessWidget {
             default:
               return ListView(
                 children:
-                snapshot.data.documents.map((DocumentSnapshot document) {
+                snapshot.data.docs.map((DocumentSnapshot document) {
                   return GestureDetector(
                     onTap: () => launch(document['url']),
                     child: Card(
