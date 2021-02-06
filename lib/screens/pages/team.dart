@@ -40,7 +40,7 @@ class TeamPage extends StatelessWidget {
         elevation: 0.0,
       ),
       body: StreamBuilder<QuerySnapshot>(
-        stream: Firestore.instance
+        stream: FirebaseFirestore.instance
             .collection('team')
             .orderBy("id", descending: false)
             .snapshots(),
@@ -53,8 +53,7 @@ class TeamPage extends StatelessWidget {
               );
             default:
               return ListView(
-                children:
-                snapshot.data.documents.map((DocumentSnapshot document) {
+                children: snapshot.data.docs.map((DocumentSnapshot document) {
                   return Card(
                     elevation: 0.0,
                     child: Padding(
@@ -64,14 +63,8 @@ class TeamPage extends StatelessWidget {
                         children: <Widget>[
                           ConstrainedBox(
                             constraints: BoxConstraints.expand(
-                              height: MediaQuery
-                                  .of(context)
-                                  .size
-                                  .height * 0.2,
-                              width: MediaQuery
-                                  .of(context)
-                                  .size
-                                  .width * 0.3,
+                              height: MediaQuery.of(context).size.height * 0.2,
+                              width: MediaQuery.of(context).size.width * 0.3,
                             ),
                             child: CachedNetworkImage(
                               imageUrl: document['image'],
@@ -90,17 +83,13 @@ class TeamPage extends StatelessWidget {
                                   mainAxisSize: MainAxisSize.min,
                                   children: <Widget>[
                                     SizedBox(
-                                      width: MediaQuery
-                                          .of(context)
-                                          .size
-                                          .width *
+                                      width: MediaQuery.of(context).size.width *
                                           0.4,
                                       child: Text(
                                         document['name'],
                                         maxLines: 2,
                                         overflow: TextOverflow.ellipsis,
-                                        style: Theme
-                                            .of(context)
+                                        style: Theme.of(context)
                                             .textTheme
                                             .headline6,
                                       ),
@@ -108,10 +97,7 @@ class TeamPage extends StatelessWidget {
                                     SizedBox(height: 10),
                                     AnimatedContainer(
                                       duration: Duration(seconds: 1),
-                                      width: MediaQuery
-                                          .of(context)
-                                          .size
-                                          .width *
+                                      width: MediaQuery.of(context).size.width *
                                           0.2,
                                       height: 5,
                                       color: Tools
@@ -119,17 +105,13 @@ class TeamPage extends StatelessWidget {
                                     ),
                                     SizedBox(height: 10),
                                     SizedBox(
-                                      width: MediaQuery
-                                          .of(context)
-                                          .size
-                                          .width *
+                                      width: MediaQuery.of(context).size.width *
                                           0.4,
                                       child: Text(
                                         document['desc'],
                                         maxLines: 2,
                                         overflow: TextOverflow.ellipsis,
-                                        style: Theme
-                                            .of(context)
+                                        style: Theme.of(context)
                                             .textTheme
                                             .subtitle2,
                                       ),

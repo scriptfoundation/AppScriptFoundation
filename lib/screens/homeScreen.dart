@@ -4,8 +4,11 @@ import 'package:ScriptFoundation/screens/pages/community.dart';
 import 'package:ScriptFoundation/screens/pages/events.dart';
 import 'package:ScriptFoundation/screens/pages/partners.dart';
 import 'package:ScriptFoundation/screens/pages/team.dart';
+import 'package:ScriptFoundation/services/notification_service.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:share/share.dart';
@@ -17,6 +20,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
+  NotificationService _notificationService;
+  RemoteMessage initialMessage;
   _launchURL(url) async {
     if (await canLaunch(url)) {
       await launch(url);
@@ -28,6 +34,97 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
+    foregroundMessages();
+    messageHandler(context);
+    _notificationService = NotificationService();
+    ///Initializng the [notification_service] if it wasn't
+    ///initialized before
+    _notificationService.initializeNotificationService();
+  }
+
+  Future<void> foregroundMessages() async {
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      RemoteNotification notification = message.notification;
+      AndroidNotification android = message.notification?.android;
+
+      // If `onMessage` is triggered with a notification, constructing our own
+      // local notification to show to users using the created channel.
+      if (notification != null && android != null) {
+        _notificationService.localNotifications.show(
+          notification.hashCode,
+          notification.title,
+          notification.body,
+          NotificationDetails(
+            android: AndroidNotificationDetails(
+              'script_fcm_channel', // id
+              'High Importance Notifications', // title
+              'This channel is used for important notifications.',
+              icon: android?.smallIcon,
+              importance: Importance.max,
+            ),
+          ),
+          payload: message?.data["type"],
+        );
+      }
+    });
+  }
+
+  Future<void> messageHandler(BuildContext context) async {
+    ///Get [initialMessage] which caused the app to open from
+    ///a terminated state
+    initialMessage = await _firebaseMessaging.getInitialMessage();
+    //Navigating to specific screens if the notificaton contains
+    //data property with a specific type
+    if (initialMessage != null) {
+      if (initialMessage?.data["type"] == "event") {
+        Navigator.push(
+          context,
+          CupertinoPageRoute(
+            builder: (_) => EventPage(),
+          ),
+        );
+      } else if (initialMessage?.data["type"] == "blog") {
+        Navigator.push(
+          context,
+          CupertinoPageRoute(
+            builder: (_) => BlogPage(),
+          ),
+        );
+      } else if (initialMessage?.data["type"] == "community") {
+        Navigator.push(
+          context,
+          CupertinoPageRoute(
+            builder: (_) => CommunityPage(),
+          ),
+        );
+      }
+    }
+
+    //Handling interactions when the app is in the background
+    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
+      if (message.data["type"] == "event") {
+        Navigator.push(
+          context,
+          CupertinoPageRoute(
+            builder: (_) => EventPage(),
+          ),
+        );
+      } else if (initialMessage?.data["type"] == "blog") {
+        Navigator.push(
+          context,
+          CupertinoPageRoute(
+            builder: (_) => BlogPage(),
+          ),
+        );
+      } else if (initialMessage?.data["type"] == "community") {
+        Navigator.push(
+          context,
+          CupertinoPageRoute(
+            builder: (_) => CommunityPage(),
+          ),
+        );
+      }
+    });
   }
 
   Widget socialActions(context) => FittedBox(
@@ -89,10 +186,8 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icons.event_seat,
             color: Colors.green,
             title: 'Events',
-            onPressed: () =>
-                Navigator.push(
-                    context,
-                    CupertinoPageRoute(builder: (context) => EventPage())),
+            onPressed: () => Navigator.push(
+                context, CupertinoPageRoute(builder: (context) => EventPage())),
           ),
           ActionCard(
             icon: Icons.location_on,
@@ -230,10 +325,7 @@ class ActionCard extends StatelessWidget {
       onTap: onPressed,
       child: Ink(
         height: MediaQuery.of(context).size.height * 0.1,
-        width: MediaQuery
-            .of(context)
-            .size
-            .width * 0.21,
+        width: MediaQuery.of(context).size.width * 0.21,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(8),
@@ -257,11 +349,7 @@ class ActionCard extends StatelessWidget {
             ),
             Text(
               title,
-              style: Theme
-                  .of(context)
-                  .textTheme
-                  .headline6
-                  .copyWith(
+              style: Theme.of(context).textTheme.headline6.copyWith(
                     fontSize: 12,
                   ),
               textAlign: TextAlign.center,

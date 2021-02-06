@@ -63,7 +63,18 @@ dependencies:
 
   # The following allows the app to connect to Cloud Firestore.
   # Use to read & write data from Firebase.
-  cloud_firestore: ^0.13.5
+  cloud_firestore: ^0.16.0
+
+  # The following allows the app to use all the core Firebase services.
+  firebase_core: ^0.7.0
+
+  # The following allows the app to use FCM.
+  # Used to receive notifications from Firebase.
+  firebase_messaging: ^8.0.0-dev.14
+  
+  # The following allows the app to create custom local notifications.
+  # Used to show notifications from FCM when app is in foreground.
+  flutter_local_notifications: ^4.0.0
 
 dev_dependencies:
   flutter_test:
